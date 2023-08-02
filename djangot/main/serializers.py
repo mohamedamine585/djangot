@@ -5,7 +5,6 @@ class OffersSerializers(serializers.ModelSerializer):
     deadline  = serializers.DateTimeField(allow_null=True)
     start  = serializers.DateTimeField(allow_null=True)
     title = serializers.CharField(allow_null=True)
-    status= serializers.CharField(allow_null=True)
     class Meta:
         model = Offer
         fields = '__all__'
@@ -13,6 +12,7 @@ class OffersSerializers(serializers.ModelSerializer):
 
 
 class ApplicationsSerializers(serializers.ModelSerializer):
+   
     offer_title = serializers.CharField(allow_null=True)
     applicant_email = serializers.CharField(allow_null=True)
     applicant_name  = serializers.CharField(allow_null=True)

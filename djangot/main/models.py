@@ -5,7 +5,6 @@ class Offer(models.Model):
     start = models.DateTimeField(max_length=400)
     deadline  = models.DateTimeField(max_length=400)
     title = models.CharField(max_length=400)
-    status = models.CharField(max_length = 100)
     class Meta :
         db_table = "offers"
     
@@ -28,4 +27,7 @@ class Application(models.Model):
         
     def __str__(self) -> str:
         return self.applicant_name
+    def get_apps(self):
+        return Application.objects.all().filter(status = "unviewd" ).filter(status = "accepted")
+    
   

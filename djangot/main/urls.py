@@ -5,5 +5,6 @@ urlpatterns = [
     path("post_offer/",views.post_offer),
     path("get_offers/",views.offers_list),
     path("post_app/",views.post_app),
-    path("delete_app/<int:idapp>/",views.delete_app)
+    path("delete_app/<int:idapp>/",views.delete_app),
+    path("accept_app/<int:idapp>/",views.accept_app)
 ]
